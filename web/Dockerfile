@@ -1,5 +1,5 @@
 FROM ubuntu:latest 
-RUN sudo apt update && sudo apt install nginx 
+RUN  apt update &&  apt install nginx 
 RUN rm -rf /usr/share/nginx/html/index.html
 COPY roboshop.conf /etc/nginx/default.d/roboshop.conf
 ADD static /usr/share/nginx/html/
