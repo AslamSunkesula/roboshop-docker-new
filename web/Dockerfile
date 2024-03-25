@@ -1,3 +1,5 @@
 FROM almalinux:latest
 RUN yum install -y nginx
-CMD ["nginx", "-g", "daemon off;"]     
+RUN rm -rf /usr/share/nginx/html/index.html
+#COPY roboshop.conf /etc/nginx/nginx.conf
+CMD ["nginx", "-g", "daemon off;"] 
